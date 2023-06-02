@@ -87,8 +87,7 @@ public class OverlayPermissionModule extends ReactContextBaseJavaModule {
                         try {
                             // MIUI 8
                             Intent localIntent = new Intent("miui.intent.action.APP_PERM_EDITOR");
-                            localIntent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                            localIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            localIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             localIntent.setData(Uri.fromParts("package", this.reactContext.getPackageName(), null));
                             localIntent.setClassName("com.miui.securitycenter",
                                     "com.miui.permcenter.permissions.PermissionsEditorActivity");
@@ -100,8 +99,7 @@ public class OverlayPermissionModule extends ReactContextBaseJavaModule {
                         try {
                             // MIUI 5/6/7
                             Intent localIntent = new Intent("miui.intent.action.APP_PERM_EDITOR");
-                            localIntent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                            localIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            localIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             localIntent.setData(Uri.fromParts("package", this.reactContext.getPackageName(), null));
                             localIntent.setClassName("com.miui.securitycenter",
                                     "com.miui.permcenter.permissions.AppPermissionsEditorActivity");
